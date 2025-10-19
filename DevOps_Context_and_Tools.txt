@@ -1,0 +1,155 @@
+# DEVOPS CONTEXT AND TOOL OVERVIEW
+
+## 1. WHAT IS DEVOPS
+DevOps is a set of practices that combines software development (Dev) and IT operations (Ops). 
+It aims to shorten the system development life cycle and deliver high-quality software continuously.
+
+Key Goals:
+- Faster delivery of software features.
+- Improved collaboration between teams.
+- Continuous integration, delivery, and deployment.
+- Automated testing and monitoring for reliability.
+
+Personas involved:
+- **DevOps Support Engineer:** Focuses on automation, pipeline management, and environment stability.
+- **Software Developer:** Develops features, commits code, and ensures it integrates cleanly into the pipeline.
+- **Software Tester:** Validates the software quality using automated and manual testing.
+- **Software Integrator:** Merges and builds code across modules and ensures compatibility.
+- **Product Owner:** Defines priorities, tracks releases, and monitors progress through dashboards and metrics.
+
+---
+
+## 2. DEVOPS STAGES AND COMMONLY USED TOOLS
+
+### STAGE 1: PLANNING & COLLABORATION
+**Tools:** Jira, Confluence, Trello, Azure Boards
+
+**Description:**
+- **Jira:** Used for agile project management, sprint tracking, and backlog management.
+- **Confluence:** A documentation and collaboration tool for teams to share project knowledge.
+- **Trello:** Lightweight visual tool for organizing tasks using boards and cards.
+- **Azure Boards:** Microsoft’s tool for work item tracking, sprint planning, and reporting.
+
+**Best Practices:**
+- Maintain a single source of truth for project tasks.
+- Regularly update status to reflect real progress.
+- Use clear, actionable user stories.
+- Encourage transparent communication across personas.
+
+---
+
+### STAGE 2: CODE MANAGEMENT
+**Tools:** Git, GitHub, GitLab, Bitbucket
+
+**Description:**
+- **Git:** Distributed version control system used to track changes in code.
+- **GitHub / GitLab / Bitbucket:** Cloud-based platforms for Git repositories with integrated CI/CD and collaboration features.
+
+**Best Practices:**
+- Use branching strategies (GitFlow, trunk-based) consistently.
+- Write meaningful commit messages.
+- Conduct regular code reviews before merging.
+- Tag releases and maintain versioning discipline.
+
+---
+
+### STAGE 3: BUILD & INTEGRATION
+**Tools:** Jenkins, GitLab CI, Bamboo, Azure DevOps Pipelines
+
+**Description:**
+- **Jenkins:** Open-source automation server for building, testing, and deploying applications.
+- **GitLab CI/CD:** Integrated CI/CD feature in GitLab for automating build and test workflows.
+- **Bamboo:** CI tool from Atlassian that integrates well with Jira and Bitbucket.
+- **Azure DevOps Pipelines:** Microsoft’s CI/CD service for building, testing, and deploying to any platform.
+
+**Best Practices:**
+- Keep build scripts version-controlled.
+- Use shared pipeline libraries for consistency.
+- Automate build verification to detect integration issues early.
+- Monitor build failures with alerting mechanisms.
+
+---
+
+### STAGE 4: TESTING
+**Tools:** Selenium, JUnit, TestNG, PyTest, Postman, SonarQube
+
+**Description:**
+- **Selenium:** Automation framework for web application testing.
+- **JUnit / TestNG:** Unit testing frameworks for Java-based applications.
+- **PyTest:** Python-based testing framework.
+- **Postman:** Tool for API testing and validation.
+- **SonarQube:** Tool for static code analysis and code quality metrics.
+
+**Best Practices:**
+- Automate regression testing within CI/CD pipelines.
+- Maintain clear separation between unit, integration, and system tests.
+- Continuously monitor code quality metrics.
+- Integrate test reports into dashboards for visibility.
+
+---
+
+### STAGE 5: DEPLOYMENT & RELEASE
+**Tools:** Docker, Kubernetes, Ansible, Helm, Terraform, ArgoCD
+
+**Description:**
+- **Docker:** Containerization platform to package applications with dependencies.
+- **Kubernetes:** Container orchestration tool to manage deployments at scale.
+- **Ansible:** Configuration management and automation tool.
+- **Helm:** Kubernetes package manager for deploying complex applications.
+- **Terraform:** Infrastructure as Code (IaC) tool for provisioning cloud resources.
+- **ArgoCD:** Continuous delivery tool for Kubernetes using GitOps principles.
+
+**Best Practices:**
+- Use immutable artifacts for deployment.
+- Store IaC configurations in version control.
+- Maintain environment parity between dev, staging, and production.
+- Implement rollback and canary deployment strategies.
+- Secure secrets and configurations using vaults.
+
+---
+
+### STAGE 6: MONITORING & FEEDBACK
+**Tools:** Prometheus, Grafana, ELK Stack (Elasticsearch, Logstash, Kibana), Splunk, New Relic
+
+**Description:**
+- **Prometheus:** Open-source monitoring and alerting toolkit.
+- **Grafana:** Visualization tool for performance and operational dashboards.
+- **ELK Stack:** Suite for centralized logging and analysis.
+- **Splunk:** Enterprise-grade data and log analysis platform.
+- **New Relic:** Application performance monitoring (APM) and telemetry platform.
+
+**Best Practices:**
+- Monitor both infrastructure and application performance.
+- Use threshold-based alerts with clear escalation procedures.
+- Centralize logs from all environments.
+- Review dashboards regularly for trend analysis.
+- Share performance metrics with developers and product owners for improvement planning.
+
+---
+
+### STAGE 7: SECURITY & COMPLIANCE
+**Tools:** SonarQube (Security plugins), OWASP ZAP, HashiCorp Vault, Snyk, Aqua Security
+
+**Description:**
+- **OWASP ZAP:** Open-source security scanner for web applications.
+- **HashiCorp Vault:** Tool for secure secret storage and management.
+- **Snyk:** Scans dependencies for known vulnerabilities.
+- **Aqua Security:** Focuses on container security and runtime protection.
+
+**Best Practices:**
+- Integrate security checks in CI/CD pipelines.
+- Enforce least-privilege access to credentials.
+- Perform regular vulnerability scans and patch updates.
+- Educate teams on secure coding and deployment practices.
+
+---
+
+## 3. SUMMARY
+
+DevOps and CI/CD practices bridge the gap between development and operations by automating every stage — from planning to deployment and monitoring.
+
+By following best practices and using the right tools effectively, each persona (developer, tester, integrator, DevOps engineer, and product owner) contributes to:
+- Faster releases
+- Higher quality
+- Improved collaboration
+- Continuous improvement across the software lifecycle
