@@ -153,3 +153,8 @@ By following best practices and using the right tools effectively, each persona 
 - Higher quality
 - Improved collaboration
 - Continuous improvement across the software lifecycle
+
+## 4. FALLBACK MESSAGE
+
+“I’m sorry, I can’t answer that. Please contact DevOps Support Team.”
+
